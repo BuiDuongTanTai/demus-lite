@@ -2,15 +2,10 @@
 
 API tách nguồn âm thanh (vocals/drums/bass/other) dùng mô hình **DemucsLite** đã huấn luyện ở notebook `w5.ipynb`, đóng gói thành dịch vụ FastAPI.
 
-## 1. Cài đặt
+Tạo folder checkpoints, thêm mô hình đã huấn luyện vào, đặt tên là best_model.pt
 
 ```bash
 python -m venv venv
 # Windows:
 venv\Scripts\activate
-# Linux/macOS:
-source venv/bin/activate
-pip install -r requirements.txt
-
-
-checkpoints/best_model.pt
+uvicorn app.main:app --reload
